@@ -1,0 +1,966 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Civilytics — Control de Obra con BIM y Análisis de Datos | Bolivia</title>
+  <meta name="description" content="Consultora de ingeniería civil en Bolivia especializada en control de obra con BIM y Power BI. Trazabilidad completa de avance físico, financiero y metrados en tiempo real." />
+  <meta name="keywords" content="control de obra, BIM Bolivia, Power BI construcción, trazabilidad de planillas, avance físico, avance financiero, metrados, Civilytics, Santa Cruz, Cochabamba" />
+  <meta name="author" content="Civilytics" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Civilytics — Control de Obra con BIM y Análisis de Datos" />
+  <meta property="og:description" content="Transformamos datos de obra en decisiones estratégicas mediante BIM y análisis de información. Operamos en Santa Cruz, Cochabamba, Oruro y La Paz." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_BO" />
+  <!-- [PLACEHOLDER] og:image — reemplazar con URL de imagen de portada -->
+  <!-- <meta property="og:image" content="https://tudominio.com/img/og-cover.png" /> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon [PLACEHOLDER] -->
+  <!-- <link rel="icon" type="image/png" href="img/favicon.png" /> -->
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     BOTÓN WHATSAPP FLOTANTE
+     ══════════════════════════════════════════ -->
+<div id="whatsapp-float">
+  <span class="whatsapp-tooltip">Escríbenos ahora</span>
+  <a href="#" data-wa class="whatsapp-bubble" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+     ══════════════════════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo" aria-label="Civilytics — Inicio">
+      <img
+        src="img/logo-navbar.png"
+        alt="Civilytics — Ingeniería · Datos · Control de Obra"
+        class="nav-logo-img"
+        height="48"
+        loading="eager"
+      />
+      <!-- Texto visible solo si el logo no carga -->
+      <span class="nav-logo-text" style="display:none;">Civilytics</span>
+    </a>
+
+    <!-- Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#problema">El problema</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto" class="nav-cta" data-wa>Agenda tu diagnóstico</a></li>
+    </ul>
+
+    <!-- Hamburguesa mobile -->
+    <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     2.1 — HERO
+     ══════════════════════════════════════════ -->
+<section id="hero" aria-label="Inicio">
+
+  <!-- Fondo blueprint / geométrico -->
+  <div class="hero-bg" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#0B1D3A" stroke-width="0.4" stroke-opacity="0.06"/>
+        </pattern>
+        <pattern id="grid-big" width="240" height="240" patternUnits="userSpaceOnUse">
+          <rect width="240" height="240" fill="url(#grid)"/>
+          <path d="M 240 0 L 0 0 0 240" fill="none" stroke="#2B5EA7" stroke-width="0.8" stroke-opacity="0.07"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-big)"/>
+      <!-- Círculos decorativos -->
+      <circle cx="85%" cy="30%" r="180" fill="none" stroke="#3B7DDD" stroke-width="0.8" stroke-opacity="0.08"/>
+      <circle cx="85%" cy="30%" r="100" fill="none" stroke="#3B7DDD" stroke-width="0.6" stroke-opacity="0.07"/>
+      <circle cx="85%" cy="30%" r="40" fill="rgba(59,125,221,0.04)"/>
+      <!-- Líneas de detalle técnico -->
+      <line x1="70%" y1="10%" x2="90%" y2="50%" stroke="#2B5EA7" stroke-width="0.6" stroke-opacity="0.1" stroke-dasharray="4 8"/>
+      <line x1="75%" y1="20%" x2="95%" y2="60%" stroke="#3B7DDD" stroke-width="0.5" stroke-opacity="0.08" stroke-dasharray="3 10"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-content reveal">
+      <span class="hero-eyebrow">BIM · Datos · Control de Obra</span>
+
+      <h1 class="hero-title">
+        Transformamos datos de obra en
+        <span>decisiones estratégicas</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Control de obra inteligente con BIM y análisis de datos para empresas constructoras en Bolivia.
+        Trazabilidad completa, dashboards en tiempo real, información clara para quienes deciden.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" data-wa class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Agenda tu diagnóstico gratuito
+        </a>
+        <a href="#servicios" class="btn-secondary">
+          Ver servicios
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <span class="hero-trust-dot">BIM + Power BI integrado</span>
+        <span class="hero-sep">·</span>
+        <span class="hero-trust-dot">Implementación en 2 semanas</span>
+        <span class="hero-sep">·</span>
+        <span class="hero-trust-dot">Santa Cruz · Cbba · Oruro · La Paz</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.2 — PROBLEMA
+     ══════════════════════════════════════════ -->
+<section id="problema" aria-labelledby="problema-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">¿Te suena familiar?</span>
+      <h2 class="section-title" id="problema-title">Los problemas de control de obra que nadie resuelve</h2>
+      <div class="divider center"></div>
+      <p class="section-subtitle" style="margin-top:16px;">
+        Estos son los obstáculos más comunes que enfrentan los directores y gerentes de obra en Bolivia.
+      </p>
+    </div>
+
+    <div class="problema-grid">
+
+      <div class="problema-card reveal reveal-delay-1">
+        <div class="problema-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <p>"No sabes realmente cómo va tu obra hasta que ya es tarde."</p>
+      </div>
+
+      <div class="problema-card reveal reveal-delay-2">
+        <div class="problema-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
+          </svg>
+        </div>
+        <p>"Las planillas de avance no te dan la claridad suficiente para tomar decisiones."</p>
+      </div>
+
+      <div class="problema-card reveal reveal-delay-3">
+        <div class="problema-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <p>"Hay diferencias entre lo que dice el avance físico y lo que refleja el gasto real."</p>
+      </div>
+
+      <div class="problema-card reveal reveal-delay-4">
+        <div class="problema-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <p>"Los retrasos se detectan cuando ya no hay margen de corrección."</p>
+      </div>
+
+      <div class="problema-card reveal reveal-delay-5">
+        <div class="problema-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <p>"La información de obra está dispersa en hojas de cálculo sin conexión entre sí."</p>
+      </div>
+
+    </div>
+
+    <p class="problema-cierre reveal" style="margin-top:40px;">
+      Si alguno de estos problemas te resulta familiar,
+      <strong>Civilytics puede ayudarte.</strong>
+    </p>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.3 — QUIÉNES SOMOS
+     ══════════════════════════════════════════ -->
+<section id="nosotros" aria-labelledby="nosotros-title">
+  <div class="container">
+
+    <div class="reveal">
+      <span class="section-tag">Quiénes somos</span>
+      <h2 class="section-title" id="nosotros-title">Ingeniería + datos para proyectos que no admiten sorpresas</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="nosotros-grid">
+
+      <div class="nosotros-text reveal reveal-delay-1">
+        <p>
+          Somos una consultora de ingeniería civil que ayuda a empresas constructoras a mejorar el
+          <strong>control y seguimiento de sus proyectos</strong> mediante la integración de modelos BIM
+          y sistemas de análisis de datos.
+        </p>
+        <p>
+          <strong>No eliminamos lo tradicional — lo potenciamos con tecnología.</strong>
+          Las planillas de obra siguen siendo la base; nosotros las hacemos trazables,
+          las conectamos con modelos BIM y las convertimos en dashboards que hablan claro.
+        </p>
+        <p>
+          Llevamos más de 2 años especializándonos en control de obra con BIM y datos,
+          con experiencia en proyectos de <strong>hasta Bs 164.000.000</strong>.
+          Innovación aplicada a la realidad de obra — no teórica, no genérica.
+        </p>
+        <p>
+          Operamos en <strong>Santa Cruz, Cochabamba, Oruro y La Paz</strong>, con disponibilidad
+          para proyectos presenciales y remotos en todo el país.
+        </p>
+
+        <div class="nosotros-tags">
+          <span class="nosotros-tag">Confianza técnica</span>
+          <span class="nosotros-tag">Innovación aplicada</span>
+          <span class="nosotros-tag">Resultados medibles</span>
+          <span class="nosotros-tag">Enfoque práctico</span>
+          <span class="nosotros-tag">BIM + Power BI</span>
+          <span class="nosotros-tag">Adaptado a Bolivia</span>
+        </div>
+      </div>
+
+      <div class="nosotros-visual reveal reveal-delay-2">
+        <div class="stat-card">
+          <span class="stat-number" data-target="164">0</span>
+          <span class="stat-label">Millones Bs en proyectos controlados</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label">Semanas para implementar el sistema</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Ciudades de operación en Bolivia</span>
+        </div>
+        <div class="stat-card accent-card">
+          <span class="stat-number">2+</span>
+          <span class="stat-label">Años especializados en control de obra con BIM y datos</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.4 — SERVICIOS
+     ══════════════════════════════════════════ -->
+<section id="servicios" aria-labelledby="servicios-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">Servicios</span>
+      <h2 class="section-title" id="servicios-title">Control de obra inteligente, de principio a fin</h2>
+      <div class="divider center"></div>
+      <p class="section-subtitle" style="margin-top:16px;">
+        Cada servicio está diseñado para darte trazabilidad completa de tu proyecto —
+        avance físico, financiero y metrados en un solo lugar.
+      </p>
+    </div>
+
+    <div class="servicios-grid">
+
+      <!-- SERVICIO 1 -->
+      <article class="servicio-card reveal reveal-delay-1">
+        <div class="servicio-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <h3 class="servicio-title">Planificación y Control de Proyectos</h3>
+        <p class="servicio-desc">
+          Diseñamos e implementamos sistemas de planificación y control de obra que permiten
+          estructurar, monitorear y optimizar el avance de tu proyecto en tiempo real.
+        </p>
+        <div class="servicio-tags">
+          <span class="servicio-tag">Revit</span>
+          <span class="servicio-tag">Power BI</span>
+          <span class="servicio-tag">Excel avanzado</span>
+        </div>
+        <ul class="servicio-items">
+          <li>Cronogramas, ruta crítica e hitos del proyecto</li>
+          <li>Seguimiento de avance físico vs. planificado</li>
+          <li>Control de desviaciones y acciones correctivas</li>
+          <li>Reportes semanales y mensuales</li>
+          <li>Dashboards interactivos de avance</li>
+        </ul>
+      </article>
+
+      <!-- SERVICIO 2 -->
+      <article class="servicio-card reveal reveal-delay-2">
+        <div class="servicio-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3 class="servicio-title">Control Físico-Financiero</h3>
+        <p class="servicio-desc">
+          Implementamos sistemas que vinculan el avance físico de obra con su impacto financiero,
+          generando trazabilidad completa ítem por ítem.
+        </p>
+        <div class="servicio-tags">
+          <span class="servicio-tag">Excel estructurado</span>
+          <span class="servicio-tag">Revit</span>
+          <span class="servicio-tag">Control de volúmenes</span>
+        </div>
+        <ul class="servicio-items">
+          <li>Metrados y valorizaciones de obra</li>
+          <li>Certificaciones de avance</li>
+          <li>Control de presupuesto ejecutado</li>
+          <li>Análisis de desviaciones costo-avance</li>
+          <li>Trazabilidad total ítem por ítem</li>
+        </ul>
+      </article>
+
+      <!-- SERVICIO 3 -->
+      <article class="servicio-card reveal reveal-delay-3">
+        <div class="servicio-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="servicio-title">Implementación BIM para Control de Obra</h3>
+        <p class="servicio-desc">
+          Utilizamos modelos BIM como herramienta de control y gestión, no solo de diseño.
+          El modelo se adapta a la obra — no la obra al modelo.
+        </p>
+        <div class="servicio-tags">
+          <span class="servicio-tag">Revit 2025</span>
+          <span class="servicio-tag">Navisworks</span>
+          <span class="servicio-tag">LOD 300+</span>
+        </div>
+        <ul class="servicio-items">
+          <li>Arquitectura, Estructuras, Instalaciones</li>
+          <li>Detección de interferencias</li>
+          <li>Metrados automáticos desde el modelo</li>
+          <li>Coordinación entre disciplinas</li>
+          <li>Vinculación del modelo con avance de obra</li>
+        </ul>
+      </article>
+
+      <!-- SERVICIO 4 -->
+      <article class="servicio-card reveal reveal-delay-4">
+        <div class="servicio-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/><polyline points="1 20 23 20"/>
+          </svg>
+        </div>
+        <h3 class="servicio-title">Dashboards y Analítica con Power BI</h3>
+        <p class="servicio-desc">
+          Desarrollamos dashboards interactivos para el monitoreo de tu proyecto,
+          facilitando la toma de decisiones basada en datos actualizados a diario.
+        </p>
+        <div class="servicio-tags">
+          <span class="servicio-tag">Power BI</span>
+          <span class="servicio-tag">Excel de obra</span>
+          <span class="servicio-tag">Exportación Revit</span>
+        </div>
+        <ul class="servicio-items">
+          <li>% avance físico y financiero</li>
+          <li>Curva S del proyecto</li>
+          <li>Análisis de desviaciones y KPIs</li>
+          <li>Actualización diaria de datos</li>
+          <li>Integración de múltiples fuentes</li>
+        </ul>
+      </article>
+
+      <!-- SERVICIO 5 — ESTRELLA -->
+      <article class="servicio-card estrella reveal" style="position:relative;">
+        <span class="badge-estrella">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Servicio estrella — Más solicitado
+        </span>
+
+        <div class="servicio-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </div>
+
+        <h3 class="servicio-title">Sistema Integrado BIM + Power BI</h3>
+        <p class="servicio-desc">
+          El sistema que conecta modelos BIM con herramientas de análisis de datos, permitiendo
+          un control visual, dinámico y en tiempo real del proyecto. El modelo se adapta a la
+          realidad de obra, no al revés.
+        </p>
+
+        <!-- Flujo técnico -->
+        <div class="flujo-tecnico">
+          <p class="flujo-title">Flujo técnico de integración</p>
+          <div class="flujo-steps">
+            <div class="flujo-step">
+              <div class="flujo-step-num">1</div>
+              <strong>Revit → Speckle</strong>
+              Modelo con parámetros de control conectado a Power BI vía Speckle
+            </div>
+            <span class="flujo-arrow" aria-hidden="true">→</span>
+            <div class="flujo-step">
+              <div class="flujo-step-num">2</div>
+              <strong>Excel → Datos limpios</strong>
+              Planillas de obra transformadas y estructuradas para Power BI
+            </div>
+            <span class="flujo-arrow" aria-hidden="true">→</span>
+            <div class="flujo-step">
+              <div class="flujo-step-num">3</div>
+              <strong>Power BI unificado</strong>
+              Cruce de información BIM + datos de obra en dashboards únicos
+            </div>
+          </div>
+          <span class="tiempo-impl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Implementación en solo 2 semanas
+          </span>
+        </div>
+
+        <!-- Beneficios -->
+        <div class="beneficios-grid" style="margin-top:24px;">
+          <div class="beneficio-item">Visualizar el avance sobre el modelo 3D</div>
+          <div class="beneficio-item">Relacionar avance físico con costos</div>
+          <div class="beneficio-item">Identificar retrasos de forma anticipada</div>
+          <div class="beneficio-item">Centralizar toda la información del proyecto</div>
+          <div class="beneficio-item">Mejorar comunicación equipo-gerencia</div>
+          <div class="beneficio-item">Datos actualizados en tiempo real</div>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.5 — PROCESO DE TRABAJO
+     ══════════════════════════════════════════ -->
+<section id="proceso" aria-labelledby="proceso-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">Cómo trabajamos</span>
+      <h2 class="section-title" id="proceso-title">Un proceso claro, de la brecha al control total</h2>
+      <div class="divider center"></div>
+    </div>
+
+    <div class="proceso-steps">
+
+      <div class="proceso-step reveal reveal-delay-1">
+        <div class="paso-num-wrap">
+          <div class="paso-num">01</div>
+        </div>
+        <p class="paso-label">Paso 1</p>
+        <h3 class="paso-title">Diagnóstico</h3>
+        <p class="paso-desc">Analizamos tu proyecto actual: planillas, avances, herramientas que usas y dónde está la brecha de control.</p>
+      </div>
+
+      <div class="proceso-step reveal reveal-delay-2">
+        <div class="paso-num-wrap">
+          <div class="paso-num">02</div>
+        </div>
+        <p class="paso-label">Paso 2</p>
+        <h3 class="paso-title">Propuesta</h3>
+        <p class="paso-desc">Diseñamos una propuesta técnica personalizada con el alcance, herramientas y entregables específicos para tu obra.</p>
+      </div>
+
+      <div class="proceso-step reveal reveal-delay-3">
+        <div class="paso-num-wrap">
+          <div class="paso-num">03</div>
+        </div>
+        <p class="paso-label">Paso 3</p>
+        <h3 class="paso-title">Implementación</h3>
+        <p class="paso-desc">Montamos el sistema: modelado BIM con parámetros de control, conexión de datos y configuración de dashboards.</p>
+      </div>
+
+      <div class="proceso-step reveal reveal-delay-4">
+        <div class="paso-num-wrap">
+          <div class="paso-num">04</div>
+        </div>
+        <p class="paso-label">Paso 4</p>
+        <h3 class="paso-title">Entrega y acompañamiento</h3>
+        <p class="paso-desc">Entregamos el sistema funcionando, con capacitación a tu equipo y soporte para que lo adopten sin fricciones.</p>
+      </div>
+
+    </div>
+
+    <div class="text-center" style="margin-top:48px;">
+      <a href="#" data-wa class="btn-primary reveal">
+        Empieza con un diagnóstico gratuito
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.6 — RESULTADOS
+     ══════════════════════════════════════════ -->
+<section id="resultados" aria-labelledby="resultados-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">¿Qué logras con Civilytics?</span>
+      <h2 class="section-title" id="resultados-title">Resultados concretos, no promesas genéricas</h2>
+      <div class="divider center"></div>
+      <p class="section-subtitle" style="margin-top:16px;">
+        Cada proyecto que implementamos genera beneficios medibles desde las primeras semanas.
+      </p>
+    </div>
+
+    <div class="resultados-grid">
+
+      <div class="resultado-card reveal reveal-delay-1">
+        <div class="resultado-check" aria-hidden="true">✓</div>
+        <p>Detección de errores en metrados <strong style="color:#fff;">antes de certificar</strong>, evitando pagos incorrectos y reclamos posteriores.</p>
+      </div>
+
+      <div class="resultado-card reveal reveal-delay-2">
+        <div class="resultado-check" aria-hidden="true">✓</div>
+        <p>Reducción significativa del tiempo invertido en <strong style="color:#fff;">generación de reportes de avance</strong> semanales y mensuales.</p>
+      </div>
+
+      <div class="resultado-card reveal reveal-delay-3">
+        <div class="resultado-check" aria-hidden="true">✓</div>
+        <p>Mayor claridad para directores de obra en la <strong style="color:#fff;">toma de decisiones estratégicas</strong> con información visual y actualizada.</p>
+      </div>
+
+      <div class="resultado-card reveal reveal-delay-4">
+        <div class="resultado-check" aria-hidden="true">✓</div>
+        <p><strong style="color:#fff;">Trazabilidad completa ítem por ítem</strong> del proyecto: sabes exactamente qué se ejecutó, cuánto costó y cuándo.</p>
+      </div>
+
+      <div class="resultado-card reveal reveal-delay-5">
+        <div class="resultado-check" aria-hidden="true">✓</div>
+        <p>Información centralizada y <strong style="color:#fff;">accesible en tiempo real</strong>, eliminando la dispersión de hojas de cálculo desconectadas.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.7 — PORTAFOLIO
+     ══════════════════════════════════════════ -->
+<section id="portafolio" aria-labelledby="portafolio-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">Portafolio</span>
+      <h2 class="section-title" id="portafolio-title">Nuestro trabajo en números y visualizaciones</h2>
+      <div class="divider center"></div>
+      <p class="section-subtitle" style="margin-top:16px;">
+        Dashboards reales desarrollados para proyectos de construcción en Bolivia.
+      </p>
+    </div>
+
+    <div class="portafolio-grid">
+
+      <div class="portfolio-item reveal reveal-delay-1">
+        <img
+          src="img/portfolio/dashboard-hormigon-acero.png"
+          alt="Dashboard Power BI — Control de hormigón, acero y costos vinculado a modelo BIM 3D"
+          class="portfolio-img-real"
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Dashboard · Control de hormigón, acero y costos + modelo BIM</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-2">
+        <img
+          src="img/portfolio/dashboard-curva-s.png"
+          alt="Dashboard Power BI — Curva S avance físico vs financiero con modelo BIM integrado"
+          class="portfolio-img-real"
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Dashboard · Curva S — Avance físico vs. financiero</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-3">
+        <img
+          src="img/portfolio/dashboard-modulo-estructural.png"
+          alt="Dashboard Power BI — Módulo estructural, monto de contrato vs ejecutado y porcentaje de avance"
+          class="portfolio-img-real"
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Dashboard · Módulo estructural — Monto ejecutado y % avance</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-1">
+        <img
+          src="img/portfolio/dashboard-gantt-planificacion.png"
+          alt="Dashboard Power BI — Planificación y gestión de obra con diagrama Gantt y Speckle"
+          class="portfolio-img-real"
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Dashboard · Planificación y Gestión de Obra — Diagrama Gantt</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-2">
+        <img
+          src="img/portfolio/modelo-bim-arquitectura.png"
+          alt="Modelo BIM arquitectónico en Revit — Vista 3D de edificio con control de obra"
+          class="portfolio-img-real"
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Modelo BIM · Arquitectura — Vista 3D con parámetros de control</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-3">
+        <img
+          src="img/portfolio/modelo-bim-control-planillas.png"
+          alt="Modelo BIM — Control de planillas con clasificación por elementos y disciplinas"
+          class="portfolio-img-real"
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Modelo BIM · Control de planillas por elemento y disciplina</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.8 — FAQ / OBJECIONES RESUELTAS
+     ══════════════════════════════════════════ -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">Preguntas frecuentes</span>
+      <h2 class="section-title" id="faq-title">Resolvemos tus dudas antes de que las tengas</h2>
+      <div class="divider center"></div>
+    </div>
+
+    <div class="faq-list" role="list">
+
+      <div class="faq-item reveal reveal-delay-1" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">Prefiero trabajar de forma tradicional, ¿por qué cambiar?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="faq-answer-inner">
+            No eliminamos lo tradicional, lo potenciamos. Tus planillas de obra siguen siendo la base.
+            Lo que hacemos es darles trazabilidad, conectarlas con un modelo BIM y convertirlas en
+            información visual que te permite tomar decisiones con mayor claridad.
+            El cambio es gradual, respetando la forma en que ya trabaja tu equipo.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿BIM no es muy caro de implementar?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="faq-answer-inner">
+            No de la forma en que nosotros trabajamos. No requerimos licencias costosas ni
+            infraestructura compleja. Nuestro sistema se adapta a las herramientas que ya usas
+            y se implementa en tan solo 2 semanas. La inversión se justifica con la reducción de
+            errores en metrados y el tiempo ahorrado en reportes de avance.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Necesito que mi equipo sepa usar BIM?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="faq-answer-inner">
+            No. Nosotros nos encargamos del modelo y los dashboards. Tu equipo solo necesita revisar
+            la información visual que generamos — reportes claros, dashboards intuitivos y avances
+            sobre el modelo 3D. Además, incluimos capacitación para que puedan leer e interpretar
+            la información sin necesitar ser especialistas en BIM.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-4" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Qué pasa si mi proyecto ya está en ejecución?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="faq-answer-inner">
+            Podemos integrarnos en cualquier etapa. Hacemos un diagnóstico de la información existente
+            — planillas, avances, presupuestos — y montamos el sistema de control sobre lo que ya tienes
+            avanzado. No perdemos el historial del proyecto; lo incorporamos al sistema desde el inicio.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-5" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Trabajan solo en Santa Cruz o en todo Bolivia?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="faq-answer-inner">
+            Operamos presencialmente en Santa Cruz, Cochabamba, Oruro y La Paz.
+            También trabajamos de forma remota para proyectos en otras ciudades o departamentos del país.
+            La mayor parte del trabajo de modelado y configuración de dashboards se puede realizar sin
+            presencia física permanente en obra.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.9 — CIUDADES DONDE OPERAMOS
+     ══════════════════════════════════════════ -->
+<section id="ciudades" aria-labelledby="ciudades-title">
+  <div class="container">
+
+    <div class="reveal">
+      <span class="section-tag">Cobertura geográfica</span>
+      <h2 class="section-title" id="ciudades-title">Presentes en las principales ciudades de Bolivia</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="ciudades-wrapper">
+
+      <div class="ciudades-list">
+        <div class="ciudad-card reveal reveal-delay-1">
+          <div class="ciudad-pin" aria-hidden="true">📍</div>
+          <div>
+            <p class="ciudad-name">Santa Cruz</p>
+            <p class="ciudad-sub">Sede principal</p>
+          </div>
+        </div>
+        <div class="ciudad-card reveal reveal-delay-2">
+          <div class="ciudad-pin" aria-hidden="true">📍</div>
+          <div>
+            <p class="ciudad-name">Cochabamba</p>
+            <p class="ciudad-sub">Presencial y remoto</p>
+          </div>
+        </div>
+        <div class="ciudad-card reveal reveal-delay-3">
+          <div class="ciudad-pin" aria-hidden="true">📍</div>
+          <div>
+            <p class="ciudad-name">Oruro</p>
+            <p class="ciudad-sub">Presencial y remoto</p>
+          </div>
+        </div>
+        <div class="ciudad-card reveal reveal-delay-4">
+          <div class="ciudad-pin" aria-hidden="true">📍</div>
+          <div>
+            <p class="ciudad-name">La Paz</p>
+            <p class="ciudad-sub">Presencial y remoto</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ciudades-text reveal reveal-delay-2">
+        <p>
+          Atendemos proyectos de construcción en las principales ciudades de Bolivia,
+          tanto de forma <strong>presencial como remota</strong>, adaptándonos a las
+          necesidades de cada proyecto.
+        </p>
+        <p>
+          Nuestra metodología permite integrar el sistema de control sin importar la
+          ubicación geográfica. Los dashboards, modelos y reportes son accesibles desde
+          cualquier dispositivo con conexión a internet.
+        </p>
+        <p>
+          <strong>¿Tu proyecto está en otra ciudad?</strong> Contáctanos — trabajamos en
+          todo el territorio nacional y nos adaptamos al contexto de cada obra.
+        </p>
+        <div style="margin-top:24px;">
+          <a href="#" data-wa class="btn-primary">
+            Consultar disponibilidad
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.10 — CTA FINAL + CONTACTO
+     ══════════════════════════════════════════ -->
+<section id="contacto" aria-labelledby="contacto-title">
+  <div class="container">
+
+    <div class="cta-card reveal">
+      <h2 class="cta-title" id="contacto-title">¿Listo para tener control real de tu obra?</h2>
+      <p class="cta-subtitle">
+        Agenda un diagnóstico gratuito y te mostramos cómo aplicar nuestro sistema
+        a tu proyecto — sin compromiso, sin tecnicismos innecesarios.
+      </p>
+      <a href="#" data-wa class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+
+    <!-- Info de contacto -->
+    <div class="contacto-info">
+      <div class="contacto-item reveal reveal-delay-1">
+        <div class="contacto-item-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <!-- [PLACEHOLDER] Reemplazar con email real -->
+        <a href="mailto:contacto@civilytics.bo">contacto@civilytics.bo</a>
+      </div>
+      <div class="contacto-item reveal reveal-delay-2">
+        <div class="contacto-item-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.14a16 16 0 0 0 5.7 5.7l1.41-1.41a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14.92v3z"/>
+          </svg>
+        </div>
+        <!-- [PLACEHOLDER] Reemplazar con número real -->
+        <span>+591 XX-XXX-XXXX</span>
+      </div>
+      <div class="contacto-item reveal reveal-delay-3">
+        <div class="contacto-item-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </div>
+        <!-- [PLACEHOLDER] Reemplazar con URL de LinkedIn real -->
+        <a href="https://linkedin.com/company/civilytics" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.11 — FOOTER
+     ══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+
+      <!-- Marca -->
+      <div>
+        <img
+          src="img/logo-footer.png"
+          alt="Civilytics logo"
+          style="height:64px; width:auto; margin-bottom:12px;"
+          loading="lazy"
+        />
+        <p class="footer-brand-name" style="display:none;">Civilytics</p>
+        <p class="footer-tagline">Ingeniería · Datos · Control de Obra</p>
+        <p class="footer-desc">
+          Consultora especializada en control de obra con BIM y análisis de datos.
+          Trazabilidad completa para proyectos de construcción en Bolivia.
+        </p>
+      </div>
+
+      <!-- Navegación -->
+      <div>
+        <p class="footer-col-title">Secciones</p>
+        <ul class="footer-links">
+          <li><a href="#problema">El problema</a></li>
+          <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <p class="footer-col-title">Contacto</p>
+        <ul class="footer-links">
+          <!-- [PLACEHOLDER] Actualizar con datos reales -->
+          <li><a href="mailto:contacto@civilytics.bo">contacto@civilytics.bo</a></li>
+          <li><a href="#" data-wa>WhatsApp</a></li>
+          <li><a href="https://linkedin.com/company/civilytics" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#ciudades">Santa Cruz · Cbba · Oruro · La Paz</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Civilytics. Todos los derechos reservados.</span>
+      <span>Hecho en Bolivia 🇧🇴</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
