@@ -120,14 +120,29 @@ button { cursor: pointer; font-family: inherit; }
   flex-shrink: 0;
 }
 .nav-logo img {
-  height: 54px;
+  height: 46px;
   width: auto;
+  flex-shrink: 0;
 }
-.nav-logo-text {
+.nav-logo-words {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1;
+}
+.nav-logo-name {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 800;
   color: var(--navy);
+  letter-spacing: .08em;
+}
+.nav-logo-tag {
+  font-size: .62rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: .06em;
+  white-space: nowrap;
 }
 .nav-links {
   display: flex;
