@@ -149,8 +149,28 @@ function initLogoFallback() {
   });
 }
 
+/* ── Visor de imágenes: clic en una imagen con data-zoom la muestra en grande ── */
+function initLightbox() {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  const img = lb.querySelector('img'), cap = lb.querySelector('.lb-cap');
+  const cerrar = () => { lb.hidden = true; img.src = ''; document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-zoom]').forEach(el => {
+    el.addEventListener('click', () => {
+      img.src = el.currentSrc || el.src;
+      img.alt = el.alt;
+      cap.textContent = el.closest('.portfolio-item')?.querySelector('.portfolio-caption')?.textContent || el.alt;
+      lb.hidden = false;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  lb.addEventListener('click', e => { if (e.target !== img) cerrar(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lb.hidden) cerrar(); });
+}
+
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
+  initLightbox();
   initWhatsApp();
   initNavbar();
   initMobileMenu();

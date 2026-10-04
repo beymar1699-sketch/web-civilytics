@@ -65,14 +65,20 @@
 
     <!-- Links -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#problema">El problema</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#plataforma">Plataforma</a></li>
       <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#curso">Curso</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://civilytics-portal.web.app/" class="nav-app" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        Ingresar a la app</a></li>
       <li><a href="#contacto" class="nav-cta" data-wa>Agenda tu diagnóstico</a></li>
     </ul>
+
+    <!-- Acceso a la app siempre visible en celular (fuera del menú) -->
+    <a href="https://civilytics-portal.web.app/" class="nav-app nav-app-movil" target="_blank" rel="noopener">Ingresar</a>
 
     <!-- Hamburguesa mobile -->
     <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -136,16 +142,16 @@
           </svg>
           Agenda tu diagnóstico gratuito
         </a>
-        <a href="#servicios" class="btn-secondary">
-          Ver servicios
+        <a href="https://civilytics-portal.web.app/supervision/?p=vivienda-la-paz" class="btn-secondary" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
+            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
           </svg>
+          Ver demo en vivo
         </a>
       </div>
 
       <div class="hero-trust">
-        <span class="hero-trust-dot">BIM + Power BI integrado</span>
+        <span class="hero-trust-dot">BIM + datos en un tablero web</span>
         <span class="hero-sep">·</span>
         <span class="hero-trust-dot">Implementación en 2 semanas</span>
         <span class="hero-sep">·</span>
@@ -435,11 +441,11 @@
           </svg>
         </div>
 
-        <h3 class="servicio-title">Sistema Integrado BIM + Power BI</h3>
+        <h3 class="servicio-title">Sistema Integrado BIM + Datos</h3>
         <p class="servicio-desc">
-          El sistema que conecta modelos BIM con herramientas de análisis de datos, permitiendo
-          un control visual, dinámico y en tiempo real del proyecto. El modelo se adapta a la
-          realidad de obra, no al revés.
+          El sistema que conecta el modelo BIM con el presupuesto, el cronograma y las planillas,
+          en un tablero web propio — sin licencias de terceros — o en Power BI si tu empresa ya lo usa.
+          El modelo se adapta a la realidad de obra, no al revés.
         </p>
 
         <!-- Flujo técnico -->
@@ -448,20 +454,20 @@
           <div class="flujo-steps">
             <div class="flujo-step">
               <div class="flujo-step-num">1</div>
-              <strong>Revit → Speckle</strong>
-              Modelo con parámetros de control conectado a Power BI vía Speckle
+              <strong>Revit → IFC</strong>
+              Modelo con un código de ítem y la planilla en que se certificó cada elemento
             </div>
             <span class="flujo-arrow" aria-hidden="true">→</span>
             <div class="flujo-step">
               <div class="flujo-step-num">2</div>
-              <strong>Excel → Datos limpios</strong>
-              Planillas de obra transformadas y estructuradas para Power BI
+              <strong>Excel estándar</strong>
+              Presupuesto, cronograma, avance y desembolsos en una plantilla única
             </div>
             <span class="flujo-arrow" aria-hidden="true">→</span>
             <div class="flujo-step">
               <div class="flujo-step-num">3</div>
-              <strong>Power BI unificado</strong>
-              Cruce de información BIM + datos de obra en dashboards únicos
+              <strong>Tablero web</strong>
+              Curva S, SPI, conciliación de saldos y modelo 3D en un solo lugar
             </div>
           </div>
           <span class="tiempo-impl">
@@ -485,6 +491,80 @@
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.4b — PLATAFORMA CIVILYTICS (la app)
+     ══════════════════════════════════════════ -->
+<section id="plataforma" aria-labelledby="plataforma-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-tag">Plataforma Civilytics</span>
+      <h2 class="section-title" id="plataforma-title">Tu obra en un tablero web, desde cualquier dispositivo</h2>
+      <div class="divider center"></div>
+      <p class="section-subtitle" style="margin-top:16px;">
+        Subes tu Excel y tu modelo IFC; la plataforma calcula el avance físico, el SPI y la conciliación
+        de saldos, y lo muestra sobre el modelo 3D. Sin licencias de Power BI ni de terceros.
+      </p>
+    </div>
+
+    <div class="plat-grid">
+      <a class="plat-shot reveal reveal-delay-1" href="https://civilytics-portal.web.app/supervision/?p=vivienda-la-paz&amp;pag=fisico" target="_blank" rel="noopener"
+         aria-label="Abrir la demo del tablero de Supervisión BIM">
+        <div class="plat-browser"><span></span><span></span><span></span><em>civilytics-portal.web.app/supervision</em></div>
+        <img src="plataforma-fisico.png" alt="Tablero web Civilytics: curva S, modelo BIM certificado al corte, SPI con semáforo y matriz de cantidades" loading="lazy" />
+        <span class="plat-play">Abrir la demo en vivo →</span>
+      </a>
+
+      <div class="plat-apps">
+        <div class="plat-app reveal reveal-delay-2">
+          <div class="plat-app-ico" aria-hidden="true">📊</div>
+          <div>
+            <p class="plat-app-name">Supervisión BIM <span class="plat-badge si">Disponible</span></p>
+            <p class="plat-app-desc">Contrato, avance físico y avance financiero. Curva S, SPI con semáforo, alertas de exceso sobre contrato y modelo 3D pintado por planilla.</p>
+          </div>
+        </div>
+        <div class="plat-app reveal reveal-delay-3">
+          <div class="plat-app-ico" aria-hidden="true">📅</div>
+          <div>
+            <p class="plat-app-name">Lookahead <span class="plat-badge si">Disponible</span></p>
+            <p class="plat-app-desc">Planificación intermedia por semanas: restricciones, compromisos y PPC, para el director de obra desde el celular.</p>
+          </div>
+        </div>
+        <div class="plat-app reveal reveal-delay-4">
+          <div class="plat-app-ico" aria-hidden="true">🧩</div>
+          <div>
+            <p class="plat-app-name">Planificación Last Planner <span class="plat-badge pr">Próximamente</span></p>
+            <p class="plat-app-desc">Plan maestro y por fases con el sistema Last Planner.</p>
+          </div>
+        </div>
+        <div class="plat-cta reveal reveal-delay-5">
+          <a href="https://civilytics-portal.web.app/supervision/?p=vivienda-la-paz" class="btn-primary" target="_blank" rel="noopener">Ver demo en vivo</a>
+          <a href="https://civilytics-portal.web.app/" class="btn-secondary" target="_blank" rel="noopener">Ingresar a la app</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="planes-grid">
+      <div class="plan-card reveal reveal-delay-1">
+        <p class="plan-tag">Autoservicio</p>
+        <h3 class="plan-title">Tú cargas tus datos</h3>
+        <p class="plan-desc">Llenas la plantilla estándar de Excel, exportas tu modelo IFC con los parámetros que enseñamos y lo publicas. Tu equipo ve el tablero al instante.</p>
+      </div>
+      <div class="plan-card destacado reveal reveal-delay-2">
+        <p class="plan-tag">Servicio Civilytics</p>
+        <h3 class="plan-title">Nosotros lo armamos</h3>
+        <p class="plan-desc">Nos pasas tu información como la tengas. Configuramos tu proyecto —módulos, submódulos, tableros y alertas— y lo actualizamos en cada planilla.</p>
+      </div>
+      <div class="plan-card reveal reveal-delay-3">
+        <p class="plan-tag">Curso</p>
+        <h3 class="plan-title">Aprende el sistema</h3>
+        <p class="plan-desc">Cada estudiante recibe su propio proyecto en la plataforma para practicar con su Excel y su modelo, y ver cómo responde el tablero.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -610,7 +690,7 @@
       <h2 class="section-title" id="portafolio-title">Nuestro trabajo en números y visualizaciones</h2>
       <div class="divider center"></div>
       <p class="section-subtitle" style="margin-top:16px;">
-        Dashboards reales desarrollados para proyectos de construcción en Bolivia.
+        Dashboards reales desarrollados para proyectos de construcción en Bolivia. Haz clic en una imagen para verla en grande.
       </p>
     </div>
 
@@ -620,7 +700,7 @@
         <img
           src="dashboard-hormigon-acero.png"
           alt="Dashboard Power BI — Control de hormigón, acero y costos vinculado a modelo BIM 3D"
-          class="portfolio-img-real"
+          class="portfolio-img-real" data-zoom
           loading="lazy"
         />
         <p class="portfolio-caption">Dashboard · Control de hormigón, acero y costos + modelo BIM</p>
@@ -630,7 +710,7 @@
         <img
           src="dashboard-curva-s.png"
           alt="Dashboard Power BI — Curva S avance físico vs financiero con modelo BIM integrado"
-          class="portfolio-img-real"
+          class="portfolio-img-real" data-zoom
           loading="lazy"
         />
         <p class="portfolio-caption">Dashboard · Curva S — Avance físico vs. financiero</p>
@@ -640,7 +720,7 @@
         <img
           src="dashboard-modulo-estructural.png"
           alt="Dashboard Power BI — Módulo estructural, monto de contrato vs ejecutado y porcentaje de avance"
-          class="portfolio-img-real"
+          class="portfolio-img-real" data-zoom
           loading="lazy"
         />
         <p class="portfolio-caption">Dashboard · Módulo estructural — Monto ejecutado y % avance</p>
@@ -650,7 +730,7 @@
         <img
           src="dashboard-ejecutado-programado.png"
           alt="Dashboard Power BI — Ejecutado vs Programado con curva S y tabla de control detallada"
-          class="portfolio-img-real"
+          class="portfolio-img-real" data-zoom
           loading="lazy"
         />
         <p class="portfolio-caption">Dashboard · Ejecutado vs. Programado — Análisis de avance integral</p>
@@ -660,7 +740,7 @@
         <img
           src="dashboard-curva-s-modulo.png"
           alt="Dashboard Power BI Civilytics — Curva S avance programado vs ejecutado por módulo arquitectónico"
-          class="portfolio-img-real"
+          class="portfolio-img-real" data-zoom
           loading="lazy"
         />
         <p class="portfolio-caption">Dashboard · Curva S por módulo — Avance programado vs. ejecutado</p>
@@ -670,14 +750,73 @@
         <img
           src="dashboard-planilla-avance.png"
           alt="Dashboard Power BI Civilytics — Planilla de avance de obra detallada con SPI y trazabilidad ítem por ítem"
-          class="portfolio-img-real"
+          class="portfolio-img-real" data-zoom
           loading="lazy"
         />
         <p class="portfolio-caption">Dashboard · Planilla de avance — Trazabilidad ítem por ítem con SPI</p>
       </div>
 
+      <div class="portfolio-item reveal reveal-delay-1">
+        <img
+          src="plataforma-contrato.png"
+          alt="Tablero web Civilytics — Contrato: curva S programada, modelo BIM por módulo, planillas, monto por módulo y top 10 de ítems"
+          class="portfolio-img-real" data-zoom
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Tablero web · Contrato — Curva S, modelo BIM por módulo y top 10</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-2">
+        <img
+          src="plataforma-financiero.png"
+          alt="Tablero web Civilytics — Avance financiero: conciliación físico-financiera, matriz de saldos y cascada del saldo sin respaldo"
+          class="portfolio-img-real" data-zoom
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Tablero web · Avance financiero — Conciliación de saldos y cascada</p>
+      </div>
+
+      <div class="portfolio-item reveal reveal-delay-3">
+        <img
+          src="curso-planillas-2.png"
+          alt="Dashboard del curso Civilytics — Curva S por módulo, SPI y porcentaje de cumplimiento por planilla"
+          class="portfolio-img-real" data-zoom
+          loading="lazy"
+        />
+        <p class="portfolio-caption">Curso · Avance por módulo y período — SPI y % de cumplimiento</p>
+      </div>
+
     </div>
 
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     2.7b — CURSO
+     ══════════════════════════════════════════ -->
+<section id="curso" aria-labelledby="curso-title">
+  <div class="container">
+    <div class="curso-grid">
+      <div class="curso-text reveal">
+        <span class="section-tag">Formación</span>
+        <h2 class="section-title" id="curso-title">Curso: Planillas de avance de obra con Revit y Power BI</h2>
+        <div class="divider"></div>
+        <p>Aprende el mismo sistema que usamos en obra: codificar el modelo por ítem, llenar la plantilla
+          estándar y construir la curva S, el SPI y la planilla de avance ítem por ítem.</p>
+        <ul class="curso-items">
+          <li>Parámetros de control en Revit: módulo, submódulo, ítem y planilla</li>
+          <li>Plantilla de Excel estándar: presupuesto, cronograma, avance y desembolsos</li>
+          <li>Dashboards de avance físico-financiero en Power BI</li>
+          <li>Tu propio proyecto en la Plataforma Civilytics para practicar</li>
+        </ul>
+        <p class="curso-instructor">Instructor: <strong>Ing. Beymar Villca Ramos</strong></p>
+        <a href="#" data-wa class="btn-primary">Quiero información del curso</a>
+      </div>
+      <div class="curso-shots reveal reveal-delay-2">
+        <img src="curso-planillas-1.png" data-zoom loading="lazy" alt="Dashboard del curso — Curva de avance físico-financiero, planillas de avance y matriz de cantidades por módulo" />
+        <img src="curso-planillas-2.png" data-zoom loading="lazy" alt="Dashboard del curso — Avance por módulo y período con SPI y porcentaje de cumplimiento" />
+      </div>
+    </div>
   </div>
 </section>
 
@@ -885,8 +1024,7 @@
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.14a16 16 0 0 0 5.7 5.7l1.41-1.41a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14.92v3z"/>
           </svg>
         </div>
-        <!-- [PLACEHOLDER] Reemplazar con número real -->
-        <span>+591 XX-XXX-XXXX</span>
+        <a href="tel:+59162751187">+591 62751187</a>
       </div>
       <div class="contacto-item reveal reveal-delay-3">
         <div class="contacto-item-icon" aria-hidden="true">
@@ -933,8 +1071,11 @@
           <li><a href="#nosotros">Quiénes somos</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li><a href="#plataforma">Plataforma</a></li>
           <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#curso">Curso</a></li>
           <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="https://civilytics-portal.web.app/" target="_blank" rel="noopener">Ingresar a la app →</a></li>
         </ul>
       </div>
 
@@ -959,6 +1100,13 @@
 
   </div>
 </footer>
+
+<!-- Visor de imágenes (portafolio y curso) -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+  <button class="lb-cerrar" aria-label="Cerrar">✕</button>
+  <img alt="" />
+  <p class="lb-cap"></p>
+</div>
 
 <!-- JavaScript -->
 <script src="main.js"></script>
